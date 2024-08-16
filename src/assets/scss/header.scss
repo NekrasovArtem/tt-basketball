@@ -1,0 +1,150 @@
+.header {
+  width: 100%;
+  height: 48px;
+  border-radius: 1rem;
+  background: $white;
+  margin-bottom: 8px;
+  @include screen_md {
+    height: 64px;
+  }
+  @include screen_bg {
+    height: 80px;
+  }
+}
+
+.header__wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include screen_bg {
+    padding: 14px 20px;
+  }
+}
+
+.header__navigation {
+  width: auto;
+  height: auto;
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 64px;
+  @include screen_bg {
+    display: flex;
+  }
+}
+
+.header__nav {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav__item {
+  @extend %font_14;
+  color: $dark;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header__menu {
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu__wrapper {
+  width: 28px;
+  height: 28px;
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu__item {
+  width: 100%;
+  height: 2px;
+  background: $black;
+}
+
+.menu__name {
+  @extend %font_14;
+  color: $dark;
+}
+
+.menu__mobile {
+  @include screen_bg {
+    display: none;
+  }
+}
+
+.menu__desktop {
+  display: none;
+  @include screen_bg {
+    display: flex;
+  }
+}
+
+.header__logo {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__mobile {
+  @include screen_bg {
+    display: none;
+  }
+}
+
+.header__user {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+.user__info {
+  width: auto;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  border-radius: 1rem;
+  @include screen_bg {
+    background: $gray;
+    padding: 3px 3px 3px 16px;
+  }
+}
+
+.user__name {
+  @extend %font_14;
+  color: $dark;
+  display: none;
+  @include screen_bg {
+    display: block;
+  }
+}
+
+.user__image {
+  width: 32px;
+  height: 32px;
+  border-radius: 3rem;
+}

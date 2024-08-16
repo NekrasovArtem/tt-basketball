@@ -1,0 +1,258 @@
+.section__learn {
+  width: 100%;
+  height: auto;
+  border-radius: 0.7rem;
+  .section__deep {
+    span {
+      color: $green;
+    }
+  }
+  @include screen_lg {
+    padding: 32px;
+    background: $white;
+  }
+}
+
+.learn__wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  @include screen_lg {
+    gap: 16px;
+  }
+}
+
+.learn__main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include screen_lg {
+    max-width: 1194px;
+    gap: 20px;
+  }
+}
+
+.learn__sections {
+  width: 100%;
+  min-height: 400px;
+  height: auto;
+  max-height: 610px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 200px;
+  border-radius: 1rem;
+  background: url("./img/learn_background.webp") no-repeat;
+  background-position: 42%;
+  background-size: auto 100%;
+  @include screen_md {
+    background-position: 0 0;
+    background-size: 160% auto;
+  }
+  @include screen_md {
+    background-position: 0 0;
+    background-size: 120% auto;
+  }
+  @include screen_lg {
+    padding: 24px;
+    gap: 300px;
+    background-position: 25%;
+    background-size: 200% auto;
+  }
+  @include screen_xl {
+    background-position: 0 0;
+    background-size: 160% auto;
+  }
+}
+
+.learn__title {
+  max-width: 760px;
+  @extend %font_20;
+  color: $white;
+  @include screen_sm {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  @include screen_md {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  @include screen_bg {
+    font-size: 42px;
+    line-height: 52px;
+  }
+  @include screen_lg {
+    font-size: 48px;
+    line-height: 57.6px;
+  }
+}
+
+.learn__trainers {
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  border-radius: 1rem;
+  background: $green;
+  @include screen_lg {
+    padding: 24px;
+  }
+}
+
+.learn__side {
+  width: 100%;
+  max-width: 612px;
+  padding-left: 16px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  border-left: 1px solid #c4c4c4;
+  @include screen_lg {
+    display: flex;
+  }
+}
+
+.learn__article {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.article__title {
+  cursor: pointer;
+  position: relative;
+  @extend %font_20;
+  color: $black;
+  transition: all 0.3s ease-in-out;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 1px;
+    right: -30px;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+    background: url("./img/green_arrow.svg") no-repeat center;
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover {
+    color: $green;
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.article__video {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 20px;
+  .article__wrapper {
+    gap: 30px;
+  }
+}
+
+.video__wrapper {
+  width: 100%;
+  max-width: 270px;
+  height: 150px;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.video__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+  &:hover {
+    width: 150%;
+    height: 150%;
+    object-position: -60px -60px;
+  }
+}
+
+.article__wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.article__name {
+  max-width: 464px;
+  @extend %font_16;
+  color: $black;
+  text-decoration: none;
+}
+
+.learn__line {
+  width: 100%;
+  height: 2px;
+  background: #c4c4c4;
+  border: none;
+}
+
+.learn__tags {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  @extend %font_10;
+  text-decoration: none;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+  @include screen_md {
+    font-size: 12px;
+    line-height: 16.8px;
+  }
+}
+
+.tag__green {
+  background: $white;
+  color: $green;
+  &:hover {
+    background: $green;
+    color: $white;
+  }
+}
+
+.tag__white {
+  background: rgba($white, 0.2);
+  color: $white;
+  &:hover {
+    background: $white;
+    color: $green;
+  }
+}
+
+.tag__black {
+  background: $gray;
+  color: $black;
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+}

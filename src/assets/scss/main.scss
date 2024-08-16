@@ -1,0 +1,100 @@
+html,
+body,
+main,
+section,
+div,
+h1,
+h2,
+h3,
+a,
+span {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $gray;
+  scroll-behavior: smooth;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 42px;
+  @include screen_md {
+    gap: 64px;
+  }
+}
+
+.section__title {
+  @extend %font_26;
+  color: $dark;
+  @include screen_md {
+    font-size: 52px;
+    line-height: 64px;
+  }
+  @include screen_bg {
+    font-size: 64px;
+    line-height: 82px;
+  }
+  @include screen_lg {
+    font-size: 80px;
+    line-height: 96px;
+  }
+}
+
+.section__head {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.section__deep {
+  width: auto;
+  height: calc(auto - 64px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 12px;
+  text-decoration: none;
+  span {
+    @extend %font_14;
+    color: $orange;
+    @include screen_md {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  img {
+    display: none;
+    @include screen_md {
+      display: block;
+    }
+  }
+}

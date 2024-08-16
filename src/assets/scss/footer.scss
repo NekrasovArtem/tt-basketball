@@ -1,0 +1,165 @@
+.footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.footer__wrapper {
+  width: 100%;
+  height: auto;
+  padding: 0 12px 25px;
+}
+
+.footer__content {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid $dark;
+}
+
+.footer__info {
+  width: 100%;
+  min-height: 360px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__background {
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 0;
+  bottom: 0px;
+  z-index: -1;
+  @include screen_sm {
+    width: 240px;
+    bottom: -20px;
+  }
+  @include screen_md {
+    width: 420px;
+    bottom: -240px;
+  }
+  @include screen_bg {
+    display: none;
+  }
+}
+
+.footer__background__mobile {
+  display: none;
+  @include screen_bg {
+    width: 460px;
+    height: auto;
+    display: block;
+    bottom: 0px;
+  }
+  @include screen_lg {
+    width: 640px;
+    bottom: -120px;
+  }
+}
+
+.footer__head {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include screen_md {
+    gap: 32px;
+  }
+}
+
+.footer__title {
+  max-width: 1130px;
+  @extend %font_20;
+  color: $dark;
+  @include screen_md {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  @include screen_lg {
+    font-size: 48px;
+    line-height: 57.6px;
+  }
+}
+
+.footer__stores {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include screen_md {
+    flex-direction: row;
+  }
+}
+
+.store {
+  width: auto;
+  height: auto;
+}
+
+.footer__copyright {
+  @extend %font_10;
+  color: $dark;
+  @include screen_md {
+    font-size: 12px;
+    line-height: 16.8px;
+  }
+}
+
+.footer__qrcode {
+  display: none;
+  @include screen_bg {
+    display: flex;
+  }
+}
+
+.qrcode {
+  width: 350px;
+  height: 400px;
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-radius: 1rem;
+  background: $white;
+  margin: 10px 20px;
+  @include screen_lg {
+    margin: 20px 80px;
+  }
+  @include screen_xl {
+    margin: 30px 240px;
+  }
+}
+
+.qrcode__image {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 24px;
+}
+
+.qrcode__os {
+  @extend %font_16;
+  font-family: $font-commissioner;
+  color: $darkGray;
+  text-transform: none;
+}
+
+.qrcode__text {
+  @extend %font_14;
+  color: $dark;
+  text-align: center;
+}
