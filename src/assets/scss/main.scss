@@ -83,18 +83,24 @@ body {
   align-items: flex-end;
   gap: 12px;
   text-decoration: none;
-  span {
-    @extend %font_14;
-    color: $orange;
-    @include screen_md {
-      font-size: 20px;
-      line-height: 26px;
-    }
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    filter: brightness(80%);
   }
-  img {
-    display: none;
-    @include screen_md {
-      display: block;
-    }
+}
+
+.deep__text {
+  @extend %font_14;
+  color: $orange;
+  @include screen_md {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.deep__img {
+  display: none;
+  @include screen_md {
+    display: block;
   }
 }

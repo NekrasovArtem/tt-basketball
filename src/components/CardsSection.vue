@@ -27,8 +27,8 @@ section.section.section__cards
   .section__head
     h2.section__title="Играй"
     a.section__deep(href="#")
-      span="В раздел"
-      img(src="../assets/img/orange_arrow.svg", alt="В раздел")
+      span.deep__text="В раздел"
+      img.deep__img(src="../assets/img/orange_arrow.svg", alt="В раздел")
   .cards__wrapper 
     .card(v-for="card in cardsInfo")
       .card__wrapper 

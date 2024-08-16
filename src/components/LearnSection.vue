@@ -5,8 +5,8 @@ section.section.section__learn
   .section__head 
     h2.section__title="Учись"
     a.section__deep(href="#")
-      span="В раздел"
-      img(src="../assets/img/green_arrow.svg", alt="В раздел")
+      span.deep__text="В раздел"
+      img.deep__img(src="../assets/img/green_arrow.svg", alt="В раздел")
   .learn__wrapper
     .learn__main 
       .learn__sections 
